@@ -1,0 +1,25 @@
+----------------------------------------------------------*
+*********************** AWESOME ***************************
+----------------------------------------------------------*
+
+# Preparation:
+
+-- install --
+awesome vicious xcompmgr feh nitrogen lxappearance arc-theme papirus-icon-theme opendoas Adapta font-awesome hddtemp polybar network-manager-applet
+
+-- begain Awesome --
+
+## We configure the .xinitrc file ##
+exec awesome
+
+## Here, we found the default awesome config
+mkdir -p .config/awesome && cp Awesome-wm/* ~/.config/awesome/
+
+## rc.lua stores all the Awesome configuration, but not the themes, these are a separate creator and arev stored in /usr/share/awesome/themes, we will see them later. ##
+
+## In case of installing picom, for its correct operation; it is configured in:
+doas nano /usr/share/examples/picom/picom.sample.conf
+    -- On Transparency/Opacity
+    inactive-opacity-override = true
+    # inactive-opacity-override = false;
+
