@@ -7,12 +7,11 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/nul; do sleep 1; done
 
 # Launch bar
-polybar tx &
 
 if type "xrandr"; then
   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-    MONITOR=$m polybar --reload top_external &
+    MONITOR=$m polybar --reload lwy &
   done
 else
-  polybar --reload lwy &
+  polybar --reload top_external &
 fi
