@@ -5,7 +5,10 @@
 # Preparation:
 
 -- install --
-awesome vicious xcompmgr feh nitrogen lxappearance arc-theme papirus-icon-theme opendoas Adapta font-awesome hddtemp polybar network-manager-applet
+awesome vicious xcompmgr feh mc ranger rofi lxappearance arc-theme papirus-icon-theme opendoas Adapta font-awesome-5 hddtemp polybar network-manager-applet
+
+-- extra fonts --
+hack-nerdfont
 
 -- begain Awesome --
 
@@ -13,7 +16,7 @@ awesome vicious xcompmgr feh nitrogen lxappearance arc-theme papirus-icon-theme 
 exec awesome
 
 ## Here, we found the default awesome config
-mkdir -p .config/awesome && cp Awesome-wm/* ~/.config/awesome/
+mkdir -p .config/awesome && cp Awesome-wm/* ~/.config/
 
 ## rc.lua stores all the Awesome configuration, but not the themes, these are a separate creator and arev stored in /usr/share/awesome/themes, we will see them later. ##
 
