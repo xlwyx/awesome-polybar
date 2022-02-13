@@ -9,7 +9,10 @@ while pgrep -u $UID -x polybar >/dev/nul; do sleep 1; done
 # Launch bar
 polybar tx &
 
-if [[$(xrandr -q | grep "HDMI connected")]]; then
-	polybar top_external &
+if type "xrandr"; then
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar --reload top_external &
+  done
+else
+  polybar --reload lwy &
 fi
-
