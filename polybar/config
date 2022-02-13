@@ -30,9 +30,9 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #114455
+background = #282944
 background-alt = #1e3c38
-foreground = #f7f4ea
+foreground = #fff0f3
 foreground-alt = #f1d6f1
 primary = #009cff
 
